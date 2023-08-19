@@ -1,0 +1,5 @@
+# Username for dokuwiki
+DOKU_WIKI_USERNAME=<your_username_here>
+
+# Password for dokuwiki login
+DOKU_WIKI_PASSWORD=<your_password_here>

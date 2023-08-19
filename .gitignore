@@ -1,0 +1,11 @@
+__pycache__
+parameters.txt
+*.iso
+
+cd/orig
+cd/working
+cd/*.log
+
+generated_cels
+generated_images
+raw_images
