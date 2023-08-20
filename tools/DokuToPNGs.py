@@ -29,16 +29,33 @@ script_raw = wiki.pages.get(page_id)
 Path(output_folder).mkdir(parents=True, exist_ok=True)
 
 # Parse the raw library records into a map
+# ===== (5) represents a title, ignore this
+# ==== (4) represents the parent folder, save this to preserve the disc structure for easy inserting
+# === (3) represents the type, either "anim" or "cel" files. ANIMs will be grouped into a folder
 for line in script_raw.split("\n"):
-    if not line or "===" in line or "^" in line:
+    if not line or "^" in line or "=====" in line:
+        continue
+
+    # If we have a parent folder header, keep track of it
+    if "====" in line:
+        parent_folder = line.replace("=", "").strip().replace("/", os.path.sep)
+        continue
+
+    # Record if this is a cel or anim file
+    if "===" in line:
+        is_anim = line.replace("=", "").strip().lower() == "anim"
         continue
 
     _, file, translation, speaker, *_ = [x.strip() for x in line.split("|")]
     file = file.replace("{", "").replace("}", "").split(":")[-1]
-    folder = file.split("_")[0]
+
+    image_output_path = os.path.join(output_folder, parent_folder)
+    if is_anim:
+        folder = file.split("_")[0]
+        image_output_path = os.path.join(image_output_path, folder)
 
     # Create the batch output folder if it doesn't exist
-    Path(os.path.join(output_folder, folder)).mkdir(parents=True, exist_ok=True)
+    Path(image_output_path).mkdir(parents=True, exist_ok=True)
 
     speaker = speaker.lower()
     print(f"File: {file}, Translation: {translation}, Speaker: {speaker}")
@@ -61,4 +78,4 @@ for line in script_raw.split("\n"):
     for index, wrapped_translation in enumerate(wrapped_translations):
         text_image.text((10, 20 + (13 * index)), wrapped_translation, font=font, fill=names_to_colors[speaker])
 
-    base_box.save(os.path.join(output_folder, folder, file))
+    base_box.save(os.path.join(image_output_path, file))
