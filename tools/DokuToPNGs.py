@@ -4,6 +4,7 @@ import dokuwiki
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
 from ConfigUtils import ConfigUtils
+from pathlib import Path
 
 if len(sys.argv) < 3:
     print("Usage: <page_id> <output_folder>")
@@ -22,6 +23,9 @@ names_to_colors = {
 config = ConfigUtils()
 wiki = dokuwiki.DokuWiki("https://snowy.coffee/doku", config.get_doku_wiki_username(), config.get_doku_wiki_password())
 script_raw = wiki.pages.get(page_id)
+
+# Create the output folder if it doesn't exist
+Path(output_folder).mkdir(parents=True, exist_ok=True)
 
 # Parse the raw library records into a map
 for line in script_raw.split("\n"):

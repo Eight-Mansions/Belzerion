@@ -1,5 +1,6 @@
 @echo off
 set working_name=working
+set working_iso=Belzerion_Working.iso
 
 echo Clearing out the old files and creating a clean workspace...
 rmdir /s /q cd\%working_name% 1>nul
@@ -18,6 +19,18 @@ echo Converting dialogue box CELs to ANIM...
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6" MSG0-1-01.C6.ANIM
 tools\3DO-ANIM.exe -origanim "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" -inputceldir "generated_cels\msg0-1-01" -includeplut FALSE -overwrite TRUE
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" MSG0-1-01.C6
+echo:
+
+echo Creating final iso...
+tools\3doiso.exe -in cd\working -out "cd\%working_iso%"
+echo:
+
+echo Signing release...
+tools\3DOHomebrewSigning.exe genromtags "cd\%working_iso%"
+echo:
+
+echo Complete!
+echo:
 echo:
 
 pause

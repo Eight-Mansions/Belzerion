@@ -14,6 +14,9 @@ output_directory = sys.argv[2]
 
 IMAGE_TOOL_EXE = "tools\\3it_win64.exe"
 
+# Create the output folder if it doesn't exist
+Path(output_directory).mkdir(parents=True, exist_ok=True)
+
 for path in Path(input_directory).glob("*.png"):
     if not path.is_file():
         continue
