@@ -17,7 +17,15 @@ names_to_colors = {
     "commander": (0, 152, 232),
     "leon": (255, 255, 255),
     "you": (255, 255, 255),
-    "flare-207": (208, 208, 0)
+    "flare-207": (208, 208, 0),
+    "police": (184, 240, 248),
+    "none": (184, 240, 248),
+    "owner": (184, 240, 248),
+    "rina": (184, 240, 248),
+    "rina-red": (232, 0, 0),
+    "question-red": (232, 0, 0),
+    "dr. hisano": (128, 224, 24),
+    "achilles": (160, 160, 176)
 }
 
 # Get the lines for this page
