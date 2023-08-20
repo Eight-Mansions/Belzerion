@@ -16,6 +16,4 @@ You'll need to extract your copy of the original game to compile. To get live su
 4. Copy the extracted files into `cd\orig`.
 
 ## Compiling
-1. Run `1-build.bat`. This will compile all the edited game assets into `cd\working`.
-2. Open `OperaFS [De]Compiler [EN].exe`, then select `Compile`. Select the `cd\working` folder, then save as `cd\Belzerion_Working.iso`.
-3. Run `3-sign.bat` to sign the game for playing.
+1. Run `build.bat`. This will create a working copy of the game under `cd\Belzerion_Working.iso`.
