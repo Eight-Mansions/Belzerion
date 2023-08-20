@@ -8,16 +8,20 @@ Xcopy /E /q cd\orig\ cd\%working_name%\ 1>nul
 echo:
 
 echo Converting dialogue boxes to PNGs...
-python tools\DokuToPNGs.py "tl:belzerion:msg0-1-01" "generated_images\msg0-1-01"
+python tools\DokuToPNGs.py "tl:belzerion:msg0" "generated_images"
+python tools\DokuToPNGs.py "tl:belzerion:msg1" "generated_images"
 echo:
 
 echo Converting dialogue box images to CELs...
-python tools\DialogueBoxesToCELs.py "generated_images\msg0-1-01" "generated_cels\msg0-1-01"
+python tools\DialogueBoxesToCELs.py "generated_images" "generated_cels"
 echo:
 
+:: TODO: Either make this part more intelligent, or hardcode the other ANIM creation steps
+:: Folder names are the ANIM names
+:: Currently, they all go in BELZERION_ART, but if others don't, we'll have to account for that structure
 echo Converting dialogue box CELs to ANIM...
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6" MSG0-1-01.C6.ANIM
-tools\3DO-ANIM.exe -origanim "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" -inputceldir "generated_cels\msg0-1-01" -includeplut FALSE -overwrite TRUE
+tools\3DO-ANIM.exe -origanim "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" -inputceldir "generated_cels\msg0-1-01.c6" -includeplut FALSE -overwrite TRUE
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" MSG0-1-01.C6
 echo:
 

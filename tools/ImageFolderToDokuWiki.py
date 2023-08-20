@@ -32,7 +32,7 @@ def add_image(image_path, doki_namespace):
     image_name_lower = str(image_path.name).lower()
 
     image_code = "|{{ " + doki_namespace + image_name_lower.replace(" ", "_") \
-                 + "|}}|" + " | | |" 
+                 + "|}}|" + " | | |"
 
     image_map[relative_path].append(image_code)
 

@@ -16,7 +16,8 @@ output_folder = sys.argv[2]
 names_to_colors = {
     "commander": (0, 152, 232),
     "leon": (255, 255, 255),
-    "you": (255, 255, 255)
+    "you": (255, 255, 255),
+    "flare-207": (208, 208, 0)
 }
 
 # Get the lines for this page
@@ -24,7 +25,7 @@ config = ConfigUtils()
 wiki = dokuwiki.DokuWiki("https://snowy.coffee/doku", config.get_doku_wiki_username(), config.get_doku_wiki_password())
 script_raw = wiki.pages.get(page_id)
 
-# Create the output folder if it doesn't exist
+# Create the main output folder if it doesn't exist
 Path(output_folder).mkdir(parents=True, exist_ok=True)
 
 # Parse the raw library records into a map
@@ -34,6 +35,11 @@ for line in script_raw.split("\n"):
 
     _, file, translation, speaker, *_ = [x.strip() for x in line.split("|")]
     file = file.replace("{", "").replace("}", "").split(":")[-1]
+    folder = file.split("_")[0]
+
+    # Create the batch output folder if it doesn't exist
+    Path(os.path.join(output_folder, folder)).mkdir(parents=True, exist_ok=True)
+
     speaker = speaker.lower()
     print(f"File: {file}, Translation: {translation}, Speaker: {speaker}")
 
@@ -55,4 +61,4 @@ for line in script_raw.split("\n"):
     for index, wrapped_translation in enumerate(wrapped_translations):
         text_image.text((10, 20 + (13 * index)), wrapped_translation, font=font, fill=names_to_colors[speaker])
 
-    base_box.save(os.path.join(output_folder, file))
+    base_box.save(os.path.join(output_folder, folder, file))
