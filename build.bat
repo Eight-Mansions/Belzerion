@@ -13,7 +13,7 @@ python tools\DokuToPNGs.py "tl:belzerion:msg1" "generated_images"
 echo:
 
 echo Converting dialogue box images to CELs...
-python tools\DialogueBoxesToCELs.py "generated_images" "generated_cels"
+python tools\DialogueBoxesToCELs.py "generated_images" "generated_cels" "raw_cels" "cd\orig"
 echo:
 
 :: TODO: Either make this part more intelligent, or hardcode the other ANIM creation steps
@@ -21,7 +21,7 @@ echo:
 :: Currently, they all go in BELZERION_ART, but if others don't, we'll have to account for that structure
 echo Converting dialogue box CELs to ANIM...
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6" MSG0-1-01.C6.ANIM
-tools\3DO-ANIM.exe -origanim "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" -inputceldir "generated_cels\msg0-1-01.c6" -includeplut FALSE -overwrite TRUE
+tools\3DO-ANIM.exe -origanim "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" -inputceldir "generated_cels\BELZERION_ART\msg0-1-01.c6" -includeplut TRUE -overwrite TRUE
 rename "cd\working\BELZERION_ART\MSG0-1-01.C6.ANIM" MSG0-1-01.C6
 echo:
 

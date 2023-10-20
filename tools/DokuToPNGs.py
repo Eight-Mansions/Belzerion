@@ -25,7 +25,8 @@ names_to_colors = {
     "rina-red": (232, 0, 0),
     "question-red": (232, 0, 0),
     "dr. hisano": (128, 224, 24),
-    "achilles": (160, 160, 176)
+    "achilles": (160, 160, 176),
+    "saeko": (255, 192, 216)
 }
 
 # Get the lines for this page
