@@ -1,0 +1,89 @@
+{
+    "BELZERION_ART\\msg5-2-02": {
+        "bpp": 8
+    },
+    "BELZERION_ART\\AtackM1": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset"]
+    },
+    "BELZERION_ART\\ene": {
+        "bpp": 6,
+        "commands": ["--coded True"]
+    },
+    "BELZERION_ART\\Her-SgageFrame": {
+        "bpp": 4,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset"]
+    },
+    "BELZERION_ART\\MusicExp": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BELZERION_ART\\MusicExp.C6"]
+    },
+    "BELZERION_ART\\Music": {
+        "bpp": 4,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset"]
+    },
+    "BERU-ART\\Title\\No": {
+        "bpp": 16,
+        "commands": [
+            "--packed false"
+        ]
+    },
+    "BERU-ART\\Title\\Title": {
+        "bpp": 16,
+        "commands": [
+            "--packed false"
+        ]
+    },
+    "BERU-ART\\END\\END1": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\END\\END1.C6"]
+    },
+    "BERU-ART\\END\\Again": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\END\\Again.C6"]
+    },
+    "BELZERION_ART\\Command": {
+        "bpp": 4,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace set", "--external-palette cd\\orig\\BERU-ART\\END\\Command.C4"]
+    },
+    "BERU-ART\\FileOpen\\Command": {
+        "bpp": 4,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace set", "--external-palette cd\\orig\\BERU-ART\\END\\Command.C4"]
+    },
+    "BERU-ART\\EndTitle\\0": {
+        "bpp": 4,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset"]
+    },
+    "BERU-ART\\Opening\\Push": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset"]
+    },
+    "BERU-ART\\FileOpen\\Files": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace set"]
+    },
+    "BERU-ART\\FileOpen\\Erande": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\FileOpen\\Erande.C6"]
+    },
+    "BERU-ART\\FileOpen\\Keshite": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\FileOpen\\Keshite.C6"]
+    },
+    "BERU-ART\\FileOpen\\S": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\FileOpen\\S-1.C6"]
+    },
+    "BERU-ART\\FileOpen": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset"]
+    },
+    "BERU-ART\\InterM\\Otukare.C6": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\InterM\\Otukare.C6"]
+    },
+    "BERU-ART\\InterM\\Otukare.u16": {
+        "bpp": 6,
+        "commands": ["--coded True", "--ccb-npabs set", "--ccb-spabs set", "--ccb-ppabs set", "--ccb-twd set", "--ccb-useav unset", "--ccb-bgnd unset", "--ccb-ace unset", "--external-palette cd\\orig\\BERU-ART\\InterM\\Otukare.C6"]
+    }
+}

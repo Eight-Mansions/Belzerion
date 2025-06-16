@@ -1,11 +1,17 @@
 __pycache__
 parameters.txt
 *.iso
+*fstree
+*.zip
 
 cd/orig
 cd/working
 cd/*.log
 
+videos/Opening/*
+
 generated_cels
+generated_anim_cels
 generated_images
+generated_anim_images
 raw_images

@@ -1,3 +1,6 @@
+# URL for dokuwiki
+DOKU_WIKI_URL=<your_url_here>
+
 # Username for dokuwiki
 DOKU_WIKI_USERNAME=<your_username_here>
 

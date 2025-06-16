@@ -67,6 +67,8 @@ class CELArgumentParser:
                 self.data["--packed"] = value
             elif key == "plutpos":
                 self.data["--ccb-plutpos"] = parse_flag(value)
+            elif key == "ldplut":
+                self.data["--ccb-ldplut"] = parse_flag(value)
             elif key == "bgnd":
                 if section == "flags":
                     self.data["--ccb-bgnd"] = parse_flag(value)

@@ -26,6 +26,9 @@ class ConfigUtils:
                 key, value = line.split("=", 1)
                 self.values[key.strip()] = value.strip()
 
+    def get_doku_wiki_url(self):
+        return self.values["DOKU_WIKI_URL"]
+
     def get_doku_wiki_username(self):
         return self.values["DOKU_WIKI_USERNAME"]
 
